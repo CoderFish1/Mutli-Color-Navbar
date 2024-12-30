@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mutli-Color-NavBar</title>
+    <style>
+        :root {
+            --color: rgb(140, 149, 139);
+            --seccolor: rgb(196, 196, 122);
+            --thirdcolor: steelblue;
+            --textcolor: rgb(255, 255, 255);
+            --defpad: 5px;
+        }
+
+        * {
+            padding: 0px;
+            margin: 0px;
+        }
+
+        body {
+            background-color: var(--thirdcolor);
+        }
+
+        .container {
+            background-color: var(--color);
+            padding: var(--defpad);
+            border: 3px solid rgb(43, 95, 103);
+        }
+
+        ul {
+            display: flex;
+            column-gap: 40px;
+        }
+
+        ul li {
+            list-style: none;
+            background-color: aqua;
+            padding: var(--defpad);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-weight: bold;
+            font-size: larger;
+            border: 1.5px solid rgb(100, 68, 68);
+            border-radius: 25px;
+        }
+
+        ul li a {
+            text-decoration: none;
+            color: var(--textcolor);
+        }
+
+        li:nth-child(even) {
+            background-color: var(--seccolor)
+        }
+
+        li:nth-child(odd) {
+            background-color: var(--thirdcolor);
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <ul>
+            <li><a href="/">Home</a></li>
+            <li><a href="/">About</a></li>
+            <li><a href="/">Gallery</a></li>
+            <li><a href="/">Others</a></li>
+            <li><a href="/">Contact</a></li>
+        </ul>
+    </div>
+</body>
+
+</html>
